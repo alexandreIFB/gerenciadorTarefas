@@ -1,22 +1,22 @@
 # API Gerenciador de Tarefas
 
-Essa será uma aplicação para gerenciar tarefas (em inglês todos). 
+Essa será uma aplicação para gerenciar tarefas (em inglês todos).
 
-### Funcionalidades: 
+### Funcionalidades:
 
-- [] Criar um novo *todo*;
-- [] Listar todos os *todos*;
-- [] Alterar o `title` e `deadline` de um *todo* existente;
-- [] Marcar um *todo* como feito;
-- [] Excluir um *todo*;
+- [] Criar um novo _todo_;
+- [] Listar todos os _todos_;
+- [] Alterar o `title` e `deadline` de um _todo_ existente;
+- [] Marcar um _todo_ como feito;
+- [] Excluir um _todo_;
 
-Tudo isso para cada usuário em específico (o username será passado pelo header). 
+Tudo isso para cada usuário em específico (o username será passado pelo header).
 
 ### Estruturação do Usuário:
 
 - id: 'uuid' (v4)
 - name: string
-- username: string unique 
+- username: string unique
 - todos: todo[]
 
 ### Estruturaçaõ da Tarefa(todo):
@@ -25,10 +25,22 @@ Tudo isso para cada usuário em específico (o username será passado pelo heade
 - title: string
 - done: boolean default = false
 - deadline: date
-	created_at: date
-  
- ### Algumas regras de negócio
- 
- - [] Deve se possivel cadastrar um usuario.
- - [] Não deve se possivel cadastrar um usuario com o mesmo username.
- - [] Para todas requisições de todo deve se verificado se o usuario é valido.
+  created_at: date
+
+### Regras de negócio
+
+- [x] Deve se possivel cadastrar um usuario.
+- [x] Não deve se possivel cadastrar um usuario com o mesmo username.
+- [x] Não deve se possivel atualizar uma `todo` com ID invalido.
+- [x] Não deve se possivel marcar uma `todo` como `done` se o ID for invalido.
+- [] Para todas requisições de todo deve se verificado se o usuario é valido.
+
+### Rodando o projeto
+
+```
+Puxe as dependencias
+$ yarn
+
+Rode o projeto
+$ yarn dev
+```
